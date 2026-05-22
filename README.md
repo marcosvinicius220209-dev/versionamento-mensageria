@@ -1,163 +1,96 @@
-# 📦 Versionamento
+---
 
-> 🚀 Repositório dedicado ao estudo e aplicação de **controle de versão com Git e GitHub**, abordando desde conceitos básicos até boas práticas utilizadas no mercado.
+# 🏗️ Guia Completo de Versionamento com Git & GitHub
+
+> 📌 Esta seção complementa o estudo de versionamento abordando fluxos profissionais, organização de equipes, automação e boas práticas utilizadas em projetos reais.
 
 ---
 
-## 📚 Sobre o Projeto
+# 📖 O que é Versionamento?
 
-Este repositório foi criado com o objetivo de:
+Versionamento é o processo de registrar e controlar alterações realizadas em arquivos ao longo do tempo.
 
-* 📖 Compreender os conceitos fundamentais de versionamento
-* 🔄 Praticar o fluxo de trabalho com Git
-* 🌿 Trabalhar com **branches**, **merges** e **pull requests**
-* 🧠 Desenvolver pensamento organizado no controle de mudanças
-* 🤝 Simular colaboração em equipe
+Com o Git, é possível:
 
----
-
-## 🧰 Tecnologias & Ferramentas
-
-* 🐙 Git
-* 🌐 GitHub
-* 💻 Terminal / CLI
-* 📝 Markdown
+* 🔄 Recuperar versões antigas
+* 👥 Trabalhar em equipe sem sobrescrever código
+* 🧠 Organizar o histórico do projeto
+* 🚀 Automatizar processos de desenvolvimento
+* 🛡️ Garantir maior segurança nas alterações
 
 ---
 
-## 🗂️ Estrutura do Repositório
+# 🧬 Tipos de Controle de Versão
 
-```
-📁 versionamento/
-├── 📄 README.md
-├── 📁 docs/          # Documentações e anotações
-├── 📁 exemplos/      # Exemplos práticos
-├── 📁 atividades/    # Exercícios propostos
-└── 📁 projetos/      # Projetos aplicando versionamento
-```
+## 🔹 Local
 
----
+O histórico fica salvo apenas no computador do desenvolvedor.
 
-## ⚙️ Conceitos Abordados
+### ✅ Vantagens
 
-* 🧾 Controle de versão
-* 📌 Commits (histórico de mudanças)
-* 🌿 Branches (ramificações)
-* 🔀 Merge (junção de branches)
-* 🔁 Rebase
-* 📥 Pull Requests
-* 🧩 Resolução de conflitos
-* 🏷️ Tags e versionamento semântico
+* Simples
+* Rápido
+
+### ❌ Desvantagens
+
+* Sem backup online
+* Alto risco de perda
 
 ---
 
-## 🚀 Como Começar
+## 🔹 Centralizado
 
-```
-# Clonar o repositório
-git clone https://github.com/prof-andrericardo/versionamento.git
+Existe um servidor central responsável pelo versionamento.
 
-# Acessar a pasta
-cd versionamento
-```
+### Exemplos
 
----
+* SVN
+* CVS
 
-## 🔄 Fluxo de Trabalho Básico
+### ✅ Vantagens
 
-```
-# Verificar status
-git status
+* Controle centralizado
+* Fácil administração
 
-# Adicionar alterações
-git add .
+### ❌ Desvantagens
 
-# Criar um commit
-git commit -m "feat: descrição da alteração"
-
-# Enviar para o repositório remoto
-git push origin main
-```
+* Dependência do servidor
+* Menor flexibilidade
 
 ---
 
-## 🌿 Trabalhando com Branches
+## 🔹 Distribuído (Git)
 
-```
-# Criar nova branch
-git checkout -b minha-feature
+Cada desenvolvedor possui uma cópia completa do repositório.
 
-# Alternar entre branches
-git checkout main
+### ✅ Vantagens
 
-# Mesclar branch
-git merge minha-feature
-```
+* Maior segurança
+* Trabalho offline
+* Melhor desempenho
+* Histórico completo local
 
 ---
 
-## 🧪 Boas Práticas
+# 🐙 Git vs GitHub
 
-* ✔️ Faça commits pequenos e descritivos
-* 🏷️ Utilize padrões como **Conventional Commits**
-* 🌱 Sempre trabalhe em branches
-* 🔍 Revise antes de subir (push)
-* 📄 Documente suas alterações
-* 🤝 Utilize Pull Requests para colaboração
-
----
-
-## 🧠 Exemplo de Commits
-
-```
-feat: adiciona funcionalidade de login
-fix: corrige erro de validação
-docs: atualiza README
-refactor: melhora estrutura do código
-```
+| Git | GitHub |
+|------|--------|
+| Sistema de versionamento | Plataforma de hospedagem |
+| Funciona localmente | Funciona online |
+| Controla histórico | Facilita colaboração |
+| Criado por Linus Torvalds | Plataforma da Microsoft |
 
 ---
 
-## 🎯 Objetivo Final
+# ⚙️ Configuração Inicial do Git
 
-Capacitar o desenvolvedor a:
+```bash
+# Configurar nome
+git config --global user.name "Seu Nome"
 
-* 📈 Manter histórico organizado de código
-* 🤝 Trabalhar em equipe de forma eficiente
-* 🚀 Aplicar versionamento em projetos reais
-* 🧩 Resolver conflitos de forma estratégica
+# Configurar email
+git config --global user.email "seuemail@email.com"
 
----
-
-## 📌 Contribuição
-
-Sinta-se à vontade para contribuir! 💡
-
-```
-# Fork o projeto
-# Crie uma branch
-git checkout -b minha-contribuicao
-
-# Commit suas alterações
-git commit -m "feat: minha contribuição"
-
-# Push
-git push origin minha-contribuicao
-```
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. 📜
-
----
-
-## 👨‍🏫 Autor
-
-Desenvolvido para fins educacionais 💙
-Professor & Desenvolvedor
-
----
-
-> 💬 *"Versionar não é só salvar código, é contar a história do seu projeto."* 🚀
+# Verificar configurações
+git config --list
